@@ -1,38 +1,265 @@
+/* src/App.css */
+
+/* General styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333; /* Default text color */
+}
+
 .App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+/* src/App.css */
+
+/* Existing styles ... */
+
+/* Dark mode styles */
+body.dark {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text */
+}
+
+.dark header {
+  background: #1c1c1c; /* Dark header */
+}
+
+.dark .project-card {
+  background: #1e1e1e; /* Dark card background */
+  border: 1px solid #444; /* Darker border */
+}
+
+.dark #contact-form input,
+.dark #contact-form textarea {
+  background-color: #2a2a2a; /* Dark input fields */
+  color: #ffffff; /* Light text */
+  border: 1px solid #444; /* Darker border */
+}
+
+.dark .btn {
+  background-color: #333; /* Dark button background */
+}
+
+.dark footer {
+  background: #1c1c1c; /* Dark footer */
+}
+
+/* Adjust other styles as necessary for dark mode */
+
+
+/* Header styles */
+header {
+  background: #1c5fe6; /* Vibrant red */
+  color: white;
+  padding: 20px 0; /* Increased padding for a more spacious feel */
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold; /* Bold links for better visibility */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+nav a:hover {
+  color: #e74c3c; /* Darker red on hover */
+}
+
+/* Project Card styles */
+.project-card {
+  background: white;
+  padding: 20px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #ff5733; /* Updated heading color */
+}
+
+.project-card a {
+  color: #ff5733; /* Updated to match header color */
+  text-decoration: none;
+}
+
+/* About section styles */
+#about {
+  padding: 20px 0;
+}
+
+#about h2 {
+  margin-bottom: 10px;
+  color: #ff5733; /* Red heading */
+  border-bottom: 2px solid #ff5733; /* Underline for emphasis */
+  display: inline-block;
+}
+
+#about p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Resume section styles */
+#resume {
+  padding: 20px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#resume h2 {
+  margin-bottom: 10px;
+  color: #ff5733; /* Red heading */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.resume-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff5733; /* Updated to match header color */
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s; /* Smooth transition */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.resume-button:hover {
+  background-color: #e74c3c; /* Darker shade for hover */
+}
+
+/* Skills section styles */
+.skills {
+  padding: 20px 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.skill-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 24px;
+}
+
+/* Testimonials section styles */
+.testimonials {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.testimonial {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px 0; /* Added margin for spacing */
+}
+
+.testimonial p {
+  font-style: italic;
+}
+
+/* Contact section styles */
+#contact {
+  padding: 20px 0;
+}
+
+#contact h2 {
+  margin-bottom: 10px;
+  color: #ff5733; /* Red heading */
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#contact-form label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border 0.3s; /* Smooth border transition */
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border: 2px solid #ff5733; /* Highlight border on focus */
+}
+
+#contact-form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.btn {
+  background-color: #182533;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.btn:hover {
+  background-color: #192430;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #ff5733; /* Updated to match header color */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.social-icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s; /* Smooth color transition */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-icons a:hover {
+  color: #00aced; /* Change to your preferred hover color */
 }
